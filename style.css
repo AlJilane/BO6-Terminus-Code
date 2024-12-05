@@ -1,0 +1,49 @@
+.variables-container {
+    display: flex;
+    justify-content: space-around; /* Spreads out variable groups evenly */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    width: 100%;
+    max-width: 900px; /* Optional: Limit the width of the layout */
+    margin: 0 auto;
+}
+
+.variable {
+    display: flex;
+    flex-direction: column; /* Ensures the label stays on top */
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+    gap: 10px; /* Space between label and images */
+}
+
+.image-option {
+    display: inline-block;
+    margin: 0 5px; /* Horizontal spacing between images */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+img {
+    width: 50px; /* Smaller size for compact layout */
+    height: 50px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+img.selected {
+    border-color: red;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+    img {
+        width: 40px; /* Adjust image size for smaller screens */
+        height: 40px;
+    }
+}
